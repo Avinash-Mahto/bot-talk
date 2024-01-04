@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #promptInput {
+      width: 80%;
+      padding: 8px;
+      margin-right: 10px;
+    }
+
+    #askButton {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    #response {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>BotTalk: NodeJS Chatbot</h1>
+  <label for="promptInput">Enter your prompt:</label>
+  <input type="text" id="promptInput" placeholder="Type a prompt">
+  <button onclick="askQuestion()" id="askButton">Ask</button>
+  <div id="response"></div>
+
+  <script>
+    async function askQuestion() {
+      const promptInput = document.getElementById('promptInput');
+      const responseContainer = document.getElementById('response');
+
+      const prompt = promptInput.value;
+      if (!prompt) {
+        alert('Please enter a prompt');
+        return;
+      }
+
+      try {
+        const response = await fetch('/ask', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ prompt }),
+        });
+
+        const data = await response.json();
+        const answer = data.answer;
+
+        responseContainer.innerHTML = `<p><strong>Answer:</strong> ${answer}</p>`;
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred while fetching the answer');
+      }
+
+      // Clear the input field
+      promptInput.value = '';
+    }
+  </script>
+</body>
+</html>
+
