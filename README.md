@@ -47,7 +47,8 @@ To run the application as a Docker container, follow these steps:
 
 Navigate to the root directory of your project in the terminal and run the following command to build the Docker image.
 
-    ```docker build -t your-image-name .
+    ```bash
+   docker build -t your-image-name .
 
 Replace your-image-name with a name you choose for your Docker image.
 
