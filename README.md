@@ -37,6 +37,7 @@ Make sure you have the following installed on your machine:
    node gpt-3.5-models.js ##For chat models models ( ex: GPT-3.5* models )
 2. Open your web browser and go to http://localhost:4000.
 3. Enter a prompt in the provided input field and click the "Ask" button to interact with the chatbot.
+   
 
 ## Running the Application with Docker
 
@@ -48,8 +49,3 @@ Navigate to the root directory of your project in the terminal and run the follo
 
 ```bash
 docker build -t your-image-name .
-
-### 2. Run the Docker Container
-### Contributing
-If you'd like to contribute to this project, feel free to submit a pull request.
-
