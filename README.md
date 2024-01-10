@@ -33,7 +33,8 @@ Make sure you have the following installed on your machine:
 ### Usage   
 1. Start the server:
    ```bash
-   node index.js
+   node index.js  ## for Text based model  ( ex: text-davinici-003 )
+   node gpt-3.5-models.js ##For chat models models ( ex: GPT-3.5* models )
 2. Open your web browser and go to http://localhost:4000.
 3. Enter a prompt in the provided input field and click the "Ask" button to interact with the chatbot.
 ### Contributing
