@@ -54,16 +54,14 @@ Replace your-image-name with a name you choose for your Docker image.
 ### 2. Run the Docker Container
 After building the Docker image, run the container with the following command:
 
-      ```bash
-docker run -p 80:4000 -d your-image-name
+      docker run -p 80:4000 -d your-image-name
 
 This command maps port 80 from the container to port 4000 on your host machine (-p 80:4000) and runs the container in detached mode (-d).
 
 ### 3. Verify the Running Container
 Verify that your container is running by executing:
 
-      ```bash
-docker ps
+      docker ps
       
 ### 4. Access Your Application
 Visit http://SERVER_IP in your web browser to access your running application.
