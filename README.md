@@ -62,7 +62,7 @@ This command maps port 80 from the container to port 4000 on your host machine (
 Verify that your container is running by executing:
 
       docker ps
-      
+ This command displays a list of running containers, and you should see your container in the list     
 ### 4. Access Your Application
 Visit http://SERVER_IP in your web browser to access your running application.
 
