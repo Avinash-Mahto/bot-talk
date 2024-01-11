@@ -18,7 +18,7 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/bot-talk.git
+   git clone https://github.com/Avinash-Mahto/bot-talk.git
 
 2. Navigate to the project directory:Create a .env file in the root of the project and add your OpenAI API key:
    ```bash
